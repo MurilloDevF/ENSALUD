@@ -1,7 +1,7 @@
 export async function queryPivot(filters: unknown) {
-  return (window as any).api?.queryPivot(filters);
+  return window.api?.queryPivot(filters);
 }
 
 export async function exportCSV(payload: unknown) {
-  return (window as any).api?.exportCSV(payload);
+  return window.api?.exportCSV(payload);
 }

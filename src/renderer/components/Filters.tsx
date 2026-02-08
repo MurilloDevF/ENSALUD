@@ -6,7 +6,7 @@ export default function Filters() {
   const [mode, setMode] = useState<'acumulado' | 'ceco'>('acumulado');
 
   const apply = async () => {
-    const res = await (window as any).api?.queryPivot({ years, month, mode });
+    const res = await window.api?.queryPivot({ years, month, mode });
     console.log('Pivot result:', res);
   };
 
