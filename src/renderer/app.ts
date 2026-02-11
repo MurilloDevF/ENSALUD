@@ -8,7 +8,7 @@ loginSection.innerHTML = `
 document.getElementById('loginBtn')!.addEventListener('click', async () => {
   const username = (document.getElementById('user') as HTMLInputElement).value;
   const password = (document.getElementById('pass') as HTMLInputElement).value;
-  const result = await (window as any).api.login(username, password);
+  const result = await window.api.login(username, password);
   alert(result?.success ? 'Login exitoso' : 'Usuario o contraseña incorrectos');
 });
 
@@ -20,10 +20,10 @@ uploadSection.innerHTML = `
 `;
 document.getElementById('uploadBtn')!.addEventListener('click', async () => {
   const filePath = (document.getElementById('filePath') as HTMLInputElement).value;
-  await (window as any).api.uploadNormalizedFile(filePath);
-  await (window as any).api.validateBuffer();
-  await (window as any).api.transformData();
-  await (window as any).api.runBudgetCalculations();
+  await window.api.uploadNormalizedFile(filePath);
+  await window.api.validateBuffer();
+  await window.api.transformData();
+  await window.api.runBudgetCalculations();
   alert('Proceso completado');
 });
 
@@ -47,6 +47,6 @@ reportsSection.innerHTML = `
 document.getElementById('exportBtn')!.addEventListener('click', async () => {
   const type = (document.getElementById('reportType') as HTMLSelectElement).value;
   const filters = { period: '2026-01..2026-03' };
-  const res = await (window as any).api.exportReport(type, filters);
+  const res = await window.api.exportReport(type, filters);
   alert(res.success ? `Reporte guardado en: ${res.filePath}` : 'Exportación cancelada');
 });
