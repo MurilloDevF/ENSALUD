@@ -1,6 +1,6 @@
 // Excel file importer
 
-import type { ImportResult } from '../types/index.js';
+import type { ImportResult } from 'types/index';
 
 /**
  * Import data from an Excel file

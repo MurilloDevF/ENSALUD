@@ -1,6 +1,6 @@
 // Data validator
 
-import type { ValidationResult, ValidationRule } from '../types/index.js';
+import type { ValidationResult, ValidationRule } from 'types/index';
 
 /**
  * Validate data against a set of rules

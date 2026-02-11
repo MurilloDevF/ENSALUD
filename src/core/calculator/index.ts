@@ -1,6 +1,6 @@
 // Budget calculator
 
-import type { CalculationResult } from '../types/index.js';
+import type { CalculationResult } from 'types/index';
 
 /**
  * Perform budget calculations

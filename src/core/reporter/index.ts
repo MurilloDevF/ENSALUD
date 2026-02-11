@@ -1,6 +1,6 @@
 // Report generator
 
-import type { ReportResult, ReportParams } from '../types/index.js';
+import type { ReportResult, ReportParams } from 'types/index';
 
 /**
  * Generate a report based on parameters
