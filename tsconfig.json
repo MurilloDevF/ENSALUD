@@ -1,1 +1,21 @@
-{\n  "compilerOptions": {\n    "module": "ESNext",\n    "target": "ES2020",\n    "jsx": "react-jsx",\n    "moduleResolution": "Node",\n    "resolveJsonModule": true,\n    "esModuleInterop": true,\n    "strict": true,\n    "baseUrl": ".",\n    "paths": {\n      "@ipc/*": ["src/renderer/ipc/*"],\n      "@components/*": ["src/renderer/components/*"],\n      "@pages/*": ["src/renderer/pages/*"]\n    },\n    "outDir": "dist"\n  },\n  "include": ["src"]\n}
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES2020",
+    "jsx": "react-jsx",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ipc/*": ["src/renderer/ipc/*"],
+      "@components/*": ["src/renderer/components/*"],
+      "@pages/*": ["src/renderer/pages/*"]
+    },
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
