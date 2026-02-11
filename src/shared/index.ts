@@ -37,7 +37,12 @@ export function isNonEmptyString(value: unknown): value is string {
 }
 
 /**
- * Deep clone an object
+ * Deep clone an object using JSON serialization
+ * Note: This method has limitations:
+ * - Does not preserve functions, undefined values, or symbols
+ * - Does not handle circular references
+ * - Converts Date objects to strings
+ * - For simple data structures only
  */
 export function deepClone<T>(obj: T): T {
   return JSON.parse(JSON.stringify(obj));

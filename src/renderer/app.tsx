@@ -2,20 +2,6 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles.css';
 
-// Type definition for window.api
-declare global {
-  interface Window {
-    api: {
-      ping: () => Promise<string>;
-      getAppVersion: () => Promise<string>;
-      importFile: (filePath: string) => Promise<{ success: boolean; message: string }>;
-      validateData: (data: unknown) => Promise<{ valid: boolean; errors: string[] }>;
-      calculate: (data: unknown) => Promise<{ success: boolean; result: unknown }>;
-      generateReport: (params: unknown) => Promise<{ success: boolean; reportPath: string | null }>;
-    };
-  }
-}
-
 const App: React.FC = () => {
   const [version, setVersion] = useState<string>('');
   const [pingResult, setPingResult] = useState<string>('');
